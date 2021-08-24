@@ -1,4 +1,4 @@
 using Test
 @test [1, 2] + [2, 1] == [3, 3]
 
-@test 3-2 == 8
+@test 3-2 == 1
