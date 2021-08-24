@@ -1,0 +1,19 @@
+name: Create Jupyter Notebook
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        julia-version: ['1.6']
+        julia-arch: [x64]
+        os: [ubuntu-latest]
+    
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Set up Julia"
+        uses: julia-actions/setup-julia@latest
+        with:
+          version: ${{ matrix.julia-version }}
+          arch: ${{ matrix.julia-arch }}
+      - run: julia -e 'println("Hello, World! from PTN")'
+        shell: bash
