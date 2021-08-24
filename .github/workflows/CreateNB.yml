@@ -11,10 +11,13 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
+
       - name: "Set up Julia"
         uses: julia-actions/setup-julia@latest
         with:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
-      - run: julia -e 'println("Hello, World! from PTN")'
+          
+      - name: "Run Julia Command"
+        run: julia -e 'println("Hello, World! from PTN")'
         shell: bash
