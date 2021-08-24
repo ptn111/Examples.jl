@@ -1,9 +1,20 @@
 # set up the working directory
-path = pwd()
-push!(LOAD_PATH, chomp(path))
+# path = pwd()
+# push!(LOAD_PATH, chomp(path))
+
+import Pkg
+Pkg.activate(@__DIR__)
+Pkg.instantiate()
+
 
 using Literate
 
-# Literate.notebook(inputfile, outputdir=pwd(); config::Dict=Dict(), kwargs...)
-Literate.notebook( "/Users/pchanpiw/Documents/GitHub/Examples/literate/an_introduction_to_julia.jl" , outputdir=pwd(); )
+const NB_DIR  = joinpath(pwd(),"literate")
+const SRC_DIR = joinpath(NB_DIR,"an_introduction_to_julia.jl")
 
+# Literate.notebook(inputfile, outputdir=pwd(); config::Dict=Dict(), kwargs...)
+println("Writing *.ipynb")
+
+Literate.notebook( SRC_DIR , NB_DIR; )
+
+# println(NB_DIR)
