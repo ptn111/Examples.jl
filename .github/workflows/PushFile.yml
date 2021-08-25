@@ -30,4 +30,4 @@ jobs:
           git checkout -b notebook
           git add -A
           git commit -a -m "Update test2315.txt"
-          git push 
+          git push --set-upstream origin notebook
