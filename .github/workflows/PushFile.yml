@@ -42,8 +42,8 @@ jobs:
       - name: Execute Julia Command
         shell: bash
         run: |
-          julia -e 'println("Hello, World from Julia!")'
           julia --project=. 
+          julia -e 'import Pkg; Pkg.activate(@__DIR__); Pkg.instantiate()'
           
 
         
