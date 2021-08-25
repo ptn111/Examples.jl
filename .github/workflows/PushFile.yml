@@ -38,12 +38,12 @@ jobs:
           echo pwd
           echo $pwd
 
-      - uses: julia-actions/setup-julia@latest
-
+      - uses: julia-actions/setup-julia@v1.6.2
       - name: Execute Julia Command
         shell: bash
         run: |
           julia -e 'println("Hello, World from Julia!")'
+          julia --project=. -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
           
         
 
