@@ -14,11 +14,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build and deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
           # DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
         run: |
-          echo "Test push commit to the remote in the workflow" >> test.txt
+          echo "Test file 22:50pm" >> test2250.txt
 
           git config --global user.name "ptn111"
           git config --global user.email "32492807+ptn111@users.noreply.github.com"
