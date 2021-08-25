@@ -48,7 +48,9 @@ jobs:
           echo ".................."
           echo "Here is in the docs folder"
           ls
+          julia --project=. 
+          julia -e 'import Pkg; Pkg.activate(@__DIR__); Pkg.instantiate()'
           julia gen_notebook.jl
-          julia -e 'gen_notebook.jl'
+          
         
 
