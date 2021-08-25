@@ -41,11 +41,14 @@ jobs:
       - name: Execute Julia Command
         shell: bash
         run: |
+          echo ".................."
           echo "Here is in the pwd"
           ls
           cd docs
+          echo ".................."
           echo "Here is in the docs folder"
           ls
+          julia gen_notebook.jl
           julia -e 'gen_notebook.jl'
         
 
