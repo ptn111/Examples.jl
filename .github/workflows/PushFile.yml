@@ -25,9 +25,6 @@ jobs:
       #   #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
       #     # DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
       
-      # - name: Create File
-      #   run: |
-      #     echo "Test file 23:55pm" >> test2355.txt
 
 
       - name: Display the path
@@ -39,9 +36,9 @@ jobs:
           echo $pwd
 
       - uses: julia-actions/setup-julia@latest
-          with:
-            version: '1.6'
-            
+        with:
+          version: '1.6'
+
       - name: Execute Julia Command
         shell: bash
         run: |
@@ -49,6 +46,11 @@ jobs:
           julia --project=. -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
 
         
+
+      # - name: Create File
+      #   run: |
+      #     echo "Test file 23:55pm" >> test2355.txt
+    
 
       # - name: Commit Files
       #   run: |
