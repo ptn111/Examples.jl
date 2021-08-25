@@ -36,6 +36,11 @@ jobs:
           echo "Here is the path of current folder"
           echo $PATH
 
+
+      - uses: julia-actions/setup-julia@latest
+        with:
+          version: '1.6'
+
       - name: Execute Julia Command
         run: julia -e 'println("Hello, World from Julia!")'
         shell: bash
