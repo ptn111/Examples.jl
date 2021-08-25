@@ -24,8 +24,9 @@ jobs:
       - name: Execute Julia Command
         shell: bash
         run: |
-          julia --project=docs/
-          julia docs/gen_notebook.jl
+          mkdir notebook
+          julia --project=src/
+          julia src/gen_notebook.jl
           
       - name: Commit Files
         run: |
