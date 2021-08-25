@@ -32,8 +32,7 @@ jobs:
         run: |
           echo "Here is the path of current folder"
           echo $PATH
-          echo pwd
-          echo $pwd
+
 
       - uses: julia-actions/setup-julia@latest
         with:
@@ -42,9 +41,11 @@ jobs:
       - name: Execute Julia Command
         shell: bash
         run: |
-          julia --project=. 
-          julia -e 'import Pkg; Pkg.activate(@__DIR__); Pkg.instantiate()'
-          julia -e 'docs/gen_notebook.jl'
+        ls
+      # julia --project=. 
+      # julia -e 'import Pkg; Pkg.activate(@__DIR__); Pkg.instantiate()'
+      # julia -e 'docs/gen_notebook.jl'
+         
 
         
 
