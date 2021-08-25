@@ -17,12 +17,16 @@ jobs:
         # env:
         #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
           # DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
+      
+      - name: Create File
         run: |
-          echo "Test file 22:50pm" >> test2250.txt
+          echo "Test file 22:50pm" >> test2300.txt
 
+      - name: Commit Files
+        run: |
           git config --global user.name "ptn111"
           git config --global user.email "32492807+ptn111@users.noreply.github.com"
 
           git add -A
           git commit -m "Update test.txt"
-          git push
+          git push origin notebook
