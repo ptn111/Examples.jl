@@ -27,8 +27,9 @@ jobs:
           git config --global user.name "ptn111"
           git config --global user.email "32492807+ptn111@users.noreply.github.com"
 
+          git fetch origin
           git checkout -b notebook
-          git pull origin master --rebase
+
           git add -A
           git commit -a -m "Update test2315.txt"
           git push --set-upstream origin notebook
