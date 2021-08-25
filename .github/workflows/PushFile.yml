@@ -11,8 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
 
+      - name: Check out repository 
+        uses: actions/checkout@v2
+        run: 
+          echo "This job is now running on a ${{ runner.os }} server hosted by GitHub Actions."
+          
+          echo "The name of current branch is ${{ github.ref }} and its repository is ${{ github.repository }}."
+      
       # - name: Build and deploy
       #   # env:
       #   #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
