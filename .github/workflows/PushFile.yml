@@ -27,6 +27,7 @@ jobs:
           git config --global user.name "ptn111"
           git config --global user.email "32492807+ptn111@users.noreply.github.com"
 
+          git checkout notebook
           git add -A
           git commit -m "Update test.txt"
-          git push origin notebook
+          git push 
