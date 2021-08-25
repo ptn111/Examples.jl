@@ -25,9 +25,9 @@ jobs:
       #   #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
       #     # DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
       
-      - name: Create File
-        run: |
-          echo "Test file 23:55pm" >> test2355.txt
+      # - name: Create File
+      #   run: |
+      #     echo "Test file 23:55pm" >> test2355.txt
 
 
       - name: Display the path
@@ -36,7 +36,9 @@ jobs:
           echo "Here is the path of current folder"
           echo $PATH
 
-
+      - name: Execute Julia Command
+        run: julia -e 'println("Hello, World from Julia!")'
+        shell: bash
         
 
       # - name: Commit Files
