@@ -12,7 +12,7 @@
 # ### How to Print
 # In Julia, we usually use println() to print
 
-println("Hello, World! from Julia Language")
+println("Hello, World from Julia!")
 
 # ### Basic Data Types
 # Integers
