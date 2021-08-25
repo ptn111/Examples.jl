@@ -29,7 +29,7 @@ jobs:
 
           git fetch origin
           git checkout -b notebook
-
+          git pull master --rebase
           git add -A
           git commit -a -m "Update test2315.txt"
           git push --set-upstream origin notebook
