@@ -43,7 +43,8 @@ jobs:
         shell: bash
         run: |
           julia -e 'println("Hello, World from Julia!")'
-          julia --project=. -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+          julia --project=. -e 
+          
 
         
 
