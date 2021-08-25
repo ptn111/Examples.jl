@@ -20,7 +20,7 @@ jobs:
       
       - name: Create File
         run: |
-          echo "Test file 22:50pm" >> test2315.txt
+          echo "Test file 23:55pm" >> test2355.txt
 
       - name: Commit Files
         run: |
@@ -30,6 +30,6 @@ jobs:
           git add -A
           git commit -a -m "Update test.txt"
           git branch notebook
-          git push --force origin notebook:master
+          git push --force origin master:notebook
 
    
