@@ -2,9 +2,10 @@
 # path = pwd()
 # push!(LOAD_PATH, chomp(path))
 
-import Pkg
-Pkg.activate(@__DIR__)
-Pkg.instantiate()
+## Mute below if in the Git Action 
+# import Pkg
+# Pkg.activate(@__DIR__)
+# Pkg.instantiate()
 
 
 using Literate
