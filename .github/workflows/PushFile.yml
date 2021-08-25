@@ -43,7 +43,7 @@ jobs:
         shell: bash
         run: |
           julia -e 'println("Hello, World from Julia!")'
-          julia --project=. -e 
+          julia --project=. 
           
 
         
