@@ -38,12 +38,15 @@ jobs:
 
 
       - uses: julia-actions/setup-julia@latest
-        with:
-          version: '1.6'
+        # with:
+        #   version: '1.6'
 
       - name: Execute Julia Command
-        run: julia -e 'println("Hello, World from Julia!")'
         shell: bash
+        run: |
+          julia -e 'println("Hello, World from Julia!")'
+          julia -e 'const NB_DIR  = joinpath(pwd(),"docs")'
+          julia -e 'println(NB_DIR)'
         
 
       # - name: Commit Files
